@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>responsive</title>
+	<script>
+      if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            document.write('<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />');
+        } else if (/(Android)/i.test(navigator.userAgent)) {
+            document.write('<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />');
+        }
+  	</script>
+	<script type="text/javascript">
+		!(function(doc, win) {
+		    var docEle = doc.documentElement,
+		        evt = "onorientationchange" in window ? "orientationchange" : "resize",
+		        fn = function() {
+		            var width = docEle.clientWidth;
+		            width && (docEle.style.fontSize = 16 * (width / 375) + "px");
+		        };
+		    win.addEventListener(evt, fn, false);
+		    doc.addEventListener("DOMContentLoaded", fn, false);
+		 
+		}(document, window));
+	</script>
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap.min.css">
+	<script type="text/javascript" src="libs/jquery.js"></script>
+	<script type="text/javascript" src="libs/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+	#main{
+		max-width: 640px;
+		margin: auto;
+		border: 1px solid red;
+	}
+	.cus-logo img{
+		height: 50px;
+		overflow: hidden;
+	}
+	.cus-logo span{
+		max-height: 50px;
+		line-height: 50px;
+	}
+	.cus-nav{
+		height: 40px;
+		line-height: 40px;
+		background-color: #be9e7f;
+		text-align: center;
+	}
+	.cus-nav a{
+		color: #fff;
+		font-size: 16px;
+		font-family: "微软雅黑";
+	}
+	.cus-nav .col-xs-3{
+		border-right: 1px solid #fff;
+	}
+	.cus-intro .panel-body p{
+		text-indent: 2em;
+	}
+	.cus-hot{
+		text-align: center;
+	}
+	.cus-hot .panel-body span{
+		font-size: 13px;	
+	}
+	.cus-copy{
+		text-align: center;
+		padding-bottom: 50px;
+	}
+	.cus-foot{
+		background-color: #be9e7f;
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+		max-width: 640px;
+		margin: auto;
+	}
+	.cus-foot .col-sm-3,
+	.cus-foot .col-xs-3{
+		border-right: 1px solid #fff;
+	}
+</style>
+<body>
+	<div class="container" id="main">
+		<!-- logo -->
+		<div class="row cus-logo">
+			<div class="col-sm-6 col-xs-6">
+				<a href="javascript:;">
+					<img src="images/logo1.PNG">
+				</a>
+			</div>
+			<div class="col-sm-6 col-xs-6">
+				<span class="glyphicon glyphicon-phone-alt"></span>
+				<a href="tel:020-00000000">020-00000000</a>
+			</div>
+		</div>
+		<!-- 导航 -->
+		<div class="row cus-nav">
+			<div class="col-xs-3">
+				<a href="javascript:;">首页</a>
+			</div>
+			<div class="col-xs-3">
+				<a href="javascript:;">项目</a>
+			</div>
+			<div class="col-xs-3">
+				<a href="javascript:;">热门</a>
+			</div>
+			<div class="col-xs-3">
+				<a href="javascript:;">专家</a>
+			</div>
+		</div>
+			<!-- 轮播图	 -->
+		<div class="row">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			  </ol>
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			      <img src="images/1.jpg" alt="图片一">
+			    </div>
+			    <div class="item">
+			      <img src="images/2.jpg" alt="图片二">
+			    </div>
+			    <div class="item">
+			      <img src="images/3.jpg" alt="图片三">
+			    </div>
+			  </div>
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+		</div>
+		<!-- 公司介绍 -->
+		<div class="row cus-intro">
+			<div class="panel panel-default">
+			  <div class="panel-heading">公司简介</div>
+			  <div class="panel-body">
+				  <p>
+				  	我还是一个正直忠诚、勤奋求实的人，会不断追求人格的自我完善；明显的特点是乐观自信、温和开朗、稳重宽厚，因此，我人际关系和谐，适应环境能力较强。爱好电脑、科普知识，喜欢钻研，正因为这些增强了我的实干精神，习惯事情或问题及早解决。
+				  </p>			    
+			  </div>
+			</div>
+		</div>
+		<!-- 热门项目 -->
+		<div class="row cus-hot">
+			<div class="panel panel-default">
+			  	<div class="panel-heading">热门项目</div>
+			  	<div class="panel-body">
+					<div class="col-xs-4 col-sm-3">
+						<a href="javascript:;" class="thumbnail">
+							<img src="images/4.jpg" alt="缩略图">
+							<span>特价美酒</span>
+						</a>
+					</div>	
+					<div class="col-xs-4 col-sm-3">
+						<a href="javascript:;" class="thumbnail">
+							<img src="images/4.jpg" alt="缩略图">
+							<span>特价美酒</span>
+						</a>
+					</div>			
+					<div class="col-xs-4 col-sm-3">
+						<a href="javascript:;" class="thumbnail">
+							<img src="images/4.jpg" alt="缩略图">
+							<span>特价美酒</span>
+						</a>
+					</div>			
+					<div class="col-xs-4 col-sm-3">
+						<a href="javascript:;" class="thumbnail">
+							<img src="images/4.jpg" alt="缩略图">
+							<span>特价美酒</span>
+						</a>
+					</div>
+					<div class="col-xs-4 col-sm-3">
+						<a href="javascript:;" class="thumbnail">
+							<img src="images/4.jpg" alt="缩略图">
+							<span>特价美酒</span>
+						</a>
+					</div>	
+					<div class="col-xs-4 col-sm-3">
+						<a href="javascript:;" class="thumbnail">
+							<img src="images/4.jpg" alt="缩略图">
+							<span>特价美酒</span>
+						</a>
+					</div>			
+					<div class="col-xs-4 col-sm-3">
+						<a href="javascript:;" class="thumbnail">
+							<img src="images/4.jpg" alt="缩略图">
+							<span>特价美酒</span>
+						</a>
+					</div>			
+					<div class="col-xs-4 col-sm-3">
+						<a href="javascript:;" class="thumbnail">
+							<img src="images/4.jpg" alt="缩略图">
+							<span>特价美酒</span>
+						</a>
+					</div>
+									    
+			  </div>
+			</div>			
+		</div>
+		<!-- 罪行动态 -->
+		<div class="row">
+			<div class="panel panel-default">
+			  <div class="panel-heading">最新动态</div>
+			  <ul class="list-group">
+				  <li class="list-group-item">
+				  	吃饭
+				  	<span class="badge">10</span>
+				  </li>
+				  <li class="list-group-item">睡觉</li>
+				  <li class="list-group-item">打圈圈</li>
+				  <li class="list-group-item">上网</li>
+				  <li class="list-group-item">看书</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 版权声明 -->
+		<div class="row cus-copy">
+		 	<p>Copyright*****</p>
+		 	<p>(京)医广【2088】第00-00-00号</p>
+		</div>
+		<div class="row cus-foot navbar-fixed-bottom">
+			<div class="col-sm-3 col-xs-3">
+				<span class="glyphicon glyphicon-earphone"></span>
+				<a href="javascript:;">电话</a>
+			</div>
+			<div class="col-sm-3 col-xs-3">
+				<span class="glyphicon glyphicon-earphone"></span>
+				<a href="javascript:;">电话</a>
+			</div>
+			<div class="col-sm-3 col-xs-3">
+				<span class="glyphicon glyphicon-earphone"></span>
+				<a href="javascript:;">电话</a>
+			</div>
+			<div class="col-sm-3 col-xs-3">
+				<span class="glyphicon glyphicon-earphone"></span>
+				<a href="javascript:;">电话</a>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>background</title>
+	<script>
+      if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            document.write('<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />');
+        } else if (/(Android)/i.test(navigator.userAgent)) {
+            document.write('<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />');
+        }
+  	</script>
+	<script type="text/javascript">
+		!(function(doc, win) {
+		    var docEle = doc.documentElement,
+		        evt = "onorientationchange" in window ? "orientationchange" : "resize",
+		        fn = function() {
+		            var width = docEle.clientWidth;
+		            width && (docEle.style.fontSize = 16 * (width / 375) + "px");
+		        };
+		    win.addEventListener(evt, fn, false);
+		    doc.addEventListener("DOMContentLoaded", fn, false);
+		 
+		}(document, window));
+	</script>
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap.min.css">
+	<script type="text/javascript" src="libs/jquery.js"></script>
+	<script type="text/javascript" src="libs/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+	.cus-second{
+		padding-top: 50px;
+	}
+	.cus-menu{
+		border: 1px solid #ddd;
+	}
+	.cus-menu li ul{
+		padding-left: 35px;
+	}
+	.cus-content .table th{
+		font-size: 13px;	
+		text-align: center;
+	}
+	.cus-content .table td{
+		font-size: 12px;
+		text-align: center;
+		vertical-align: middle;
+	}
+</style>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  	<div class="container">
+		    <div class="navbar-header">
+		      	<a class="navbar-brand" href="javascript:;">后台管理系统</a>
+		    </div>  
+	        <ul class="nav navbar-nav pull-right">
+		        <li class="active"><a href="javascript:;">欢迎：151********</a></li>
+		        <li><a href="javascript:;">退出</a></li>
+		        <li>
+		        	<a href="javascript:;">消息<span class="badge">10</span></a>
+	        	</li>
+	        </ul>
+	  	</div>
+	</nav>
+	<ul class="nav nav-pills cus-second">
+	  <li class="active"><a href="javascript:;">订单管理</a></li>
+	  <li><a href="javascript:;">员工管理</a></li>
+	  <li><a href="javascript:;">会员管理</a></li>
+	  <li><a href="javascript:;">促销管理</a></li>
+	  <li><a href="javascript:;">车辆管理</a></li>
+	</ul>
+	<div class="row">
+		<div class="col-lg-2 col-sm-2 col-xs-2 cus-menu">
+			<ul class="nav nav-pills nav-stacked" role="tablist">
+			  <li>
+			    <a data-toggle="collapse" href="javascript:;" data-target="#menu-left">
+			      <span class="glyphicon glyphicon-collapse-down"></span>
+			      订单管理 
+			      <span class="caret"></span>
+			    </a>
+			    <ul class="nav nav-pills nav-stacked collapse in" id="menu-left">
+			      	<li>
+				      	<a href="javascript:;">
+					      	<span class="glyphicon glyphicon-list"></span>
+					      	订单列表
+				      	</a>
+			      	</li>
+			      	<li>
+				      	<a href="javascript:;">
+				      		<span class="glyphicon glyphicon-plus"></span>
+				      		增加订单
+			      		</a>
+  				  	</li>
+			    </ul>
+			  </li>
+			</ul>
+			<ul class="nav nav-pills nav-stacked" role="tablist">
+			  <li>
+			    <a data-toggle="collapse" href="javascript:;" data-target="#menu-left2">
+			      <span class="glyphicon glyphicon-collapse-down"></span>
+			      订单管理 
+			      <span class="caret"></span>
+			    </a>
+			    <ul class="nav nav-pills nav-stacked collapse in" id="menu-left2">
+			      	<li>
+				      	<a href="javascript:;">
+					      	<span class="glyphicon glyphicon-list"></span>
+					      	订单列表
+				      	</a>
+			      	</li>
+			      	<li>
+				      	<a href="javascript:;">
+				      		<span class="glyphicon glyphicon-plus"></span>
+				      		增加订单
+			      		</a>
+  				  	</li>
+			    </ul>
+			  </li>
+			</ul>
+		</div>
+		<div class="col-lg-10 col-sm-10 col-xs-10">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<form role="form" class="form-inline">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="请输入...">
+						</div>
+						<button type="submit" class="btn btn-default">提交</button>
+					</form>					
+				</div>
+				<div class="panel-body cus-content">
+					<table class="table table-bordered table-hover">
+						<thead>
+							<tr>
+								<th>订单号</th>
+								<th>产品名称</th>
+								<th>客户名称</th>
+								<th>性别</th>
+								<th>电话</th>
+								<th>地址</th>
+								<th>车牌号码</th>
+								<th>车型</th>
+								<th>车身颜色</th>
+								<th>预约时间</th>
+								<th>下单时间</th>
+								<th>订单状态</th>
+								<th>操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>L010010283166113</td>
+								<td>上门辅导写代码</td>
+								<td>李先生</td>
+								<td>男</td>
+								<td>152********</td>
+								<td>唐家路9号</td>
+								<td>京A123456</td>
+								<td>奔驰366</td>
+								<td>白色</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>未分配</td>
+								<td>
+									<a href="javascript:;">【分配】</a>
+									<a href="javascript:;">【修改】</a>
+								</td>
+							</tr>
+							<tr>
+								<td>L010010283166113</td>
+								<td>上门辅导写代码</td>
+								<td>李先生</td>
+								<td>男</td>
+								<td>152********</td>
+								<td>唐家路9号</td>
+								<td>京A123456</td>
+								<td>奔驰366</td>
+								<td>白色</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>未分配</td>
+								<td>
+									<a href="javascript:;">【分配】</a>
+									<a href="javascript:;">【修改】</a>
+								</td>
+							</tr>
+							<tr>
+								<td>L010010283166113</td>
+								<td>上门辅导写代码</td>
+								<td>李先生</td>
+								<td>男</td>
+								<td>152********</td>
+								<td>唐家路9号</td>
+								<td>京A123456</td>
+								<td>奔驰366</td>
+								<td>白色</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>未分配</td>
+								<td>
+									<a href="javascript:;">【分配】</a>
+									<a href="javascript:;">【修改】</a>
+								</td>
+							</tr>
+							<tr>
+								<td>L010010283166113</td>
+								<td>上门辅导写代码</td>
+								<td>李先生</td>
+								<td>男</td>
+								<td>152********</td>
+								<td>唐家路9号</td>
+								<td>京A123456</td>
+								<td>奔驰366</td>
+								<td>白色</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>未分配</td>
+								<td>
+									<a href="javascript:;">【分配】</a>
+									<a href="javascript:;">【修改】</a>
+								</td>
+							</tr>
+							<tr>
+								<td>L010010283166113</td>
+								<td>上门辅导写代码</td>
+								<td>李先生</td>
+								<td>男</td>
+								<td>152********</td>
+								<td>唐家路9号</td>
+								<td>京A123456</td>
+								<td>奔驰366</td>
+								<td>白色</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>未分配</td>
+								<td>
+									<a href="javascript:;">【分配】</a>
+									<a href="javascript:;">【修改】</a>
+								</td>
+							</tr>
+							<tr>
+								<td>L010010283166113</td>
+								<td>上门辅导写代码</td>
+								<td>李先生</td>
+								<td>男</td>
+								<td>152********</td>
+								<td>唐家路9号</td>
+								<td>京A123456</td>
+								<td>奔驰366</td>
+								<td>白色</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>未分配</td>
+								<td>
+									<a href="javascript:;">【分配】</a>
+									<a href="javascript:;">【修改】</a>
+								</td>
+							</tr>
+							<tr>
+								<td>L010010283166113</td>
+								<td>上门辅导写代码</td>
+								<td>李先生</td>
+								<td>男</td>
+								<td>152********</td>
+								<td>唐家路9号</td>
+								<td>京A123456</td>
+								<td>奔驰366</td>
+								<td>白色</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>2015-02-02<br/>21:20:04</td>
+								<td>未分配</td>
+								<td>
+									<a href="javascript:;">【分配】</a>
+									<a href="javascript:;">【修改】</a>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="13">
+									<ul class="pagination">
+										<li><a href="javascript:;">上一页</a></li>
+										<li><a href="javascript:;">1</a></li>
+										<li><a href="javascript:;">2</a></li>
+										<li><a href="javascript:;">3</a></li>
+										<li><a href="javascript:;">4</a></li>
+										<li><a href="javascript:;">5</a></li>
+										<li><a href="javascript:;">下一页</a></li>
+								  	</ul>
+								</td>								  
+							</tr>							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
